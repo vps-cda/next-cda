@@ -5,6 +5,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    pull_policy: build
     container_name: client-portfolio-next
     environment:
       - "NEXT_WEBPACK_USEPOLLING=1"
