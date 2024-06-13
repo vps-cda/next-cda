@@ -1,14 +1,17 @@
-version: '3.8'
+version: "3"
 
 services:
-  app:
+  next-app:
     build:
       context: ./
       dockerfile: Dockerfile
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/.next
-    pull_policy: build
+    container_name: client-portfolio-next
+    environment:
+      - "NEXT_WEBPACK_USEPOLLING=1"
     ports:
-      - "3000:3000"
+      - '3000:3000'
+    networks:
+      - app
+
+networks:
+  app:

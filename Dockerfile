@@ -2,10 +2,8 @@ FROM node:18
 
 WORKDIR /app
 
-RUN npm install
-
 COPY . .
 
 EXPOSE 3000
 
-CMD npm run build
+CMD npm install && npm run build
