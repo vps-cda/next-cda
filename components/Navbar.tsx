@@ -5,12 +5,12 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 const Navbar = () => {
   const social = [
     {
-      link: "https://www.linkedin.com",
+      link: "https://www.linkedin.com/in/th%C3%A9o-couvelard-4089111b5/",
       label: "LinkedIn",
       Icon: SiLinkedin,
     },
     {
-      link: "https://www.github.com",
+      link: "https://github.com/Theo02-12",
       label: "Github",
       Icon: SiGithub,
     },
