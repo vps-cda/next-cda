@@ -1,18 +1,13 @@
-version: "3"
+version: '3.8'
 
 services:
-  next-app:
+  nextjs-app:
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
-    pull_policy: build
-    container_name: client-portfolio-next
-    environment:
-      - "NEXT_WEBPACK_USEPOLLING=1"
+    pull_policy: "build"
     ports:
-      - '3000:3000'
-    networks:
-      - app
-
-networks:
-  app:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    restart: always
